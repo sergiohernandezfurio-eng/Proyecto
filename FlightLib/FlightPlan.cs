@@ -25,12 +25,21 @@ namespace FlightLib
         }
 
         // Metodos
-
         public void SetId(string id)
         {
             this.id = id;
         }
-        public void
+       
+        public void SetCurrentPosition(double cpx, double cpy)
+        {
+            this.currentPosition = new Position(cpx, cpy);
+        }
+        
+        public void SetFinalPosition(double fpx, double fpy)
+        {
+            this.finalPosition = new Position(fpx, fpy);
+        }
+        
         public void SetVelocidad(double velocidad)
         // setter del atributo velocidad
         { this.velocidad = velocidad; }
