@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightLib", "FlightLib\Flig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatorConsole", "SimulatorConsole\SimulatorConsole.csproj", "{3A87A27D-F5E9-4F8E-B229-683005A87FF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menú de Opciones", "Menú de Opciones\Menú de Opciones.csproj", "{C265B2B5-11BF-400E-B01B-C9D31F1643C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3A87A27D-F5E9-4F8E-B229-683005A87FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A87A27D-F5E9-4F8E-B229-683005A87FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A87A27D-F5E9-4F8E-B229-683005A87FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C265B2B5-11BF-400E-B01B-C9D31F1643C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C265B2B5-11BF-400E-B01B-C9D31F1643C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C265B2B5-11BF-400E-B01B-C9D31F1643C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C265B2B5-11BF-400E-B01B-C9D31F1643C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
