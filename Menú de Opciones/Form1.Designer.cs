@@ -43,6 +43,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flightPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirDatosDeVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,11 +187,29 @@
             this.introducirDatosDeVueloToolStripMenuItem.Text = "Introducir datos de vuelo";
             this.introducirDatosDeVueloToolStripMenuItem.Click += new System.EventHandler(this.introducirDatosDeVueloToolStripMenuItem_Click);
             // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(178, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 20);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "X:";
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(371, 145);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 20);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Y:";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.v);
@@ -231,6 +251,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem flightPlanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem introducirDatosDeVueloToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

@@ -36,7 +36,7 @@ namespace Menú_de_Opciones
         private void introducirDatosDeVueloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             label1.Text = "Identificador";
-            label2.Text = "Posición actual";
+            label2.Text = "Posición inicial";
             label3.Text = "Posición final";
             label4.Text = "Velocidad";
             label5.Text = "";
