@@ -1,6 +1,6 @@
 ﻿namespace Menú_de_Opciones
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,11 +30,11 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.va = new System.Windows.Forms.TextBox();
-            this.yfa = new System.Windows.Forms.TextBox();
-            this.xfa = new System.Windows.Forms.TextBox();
-            this.yia = new System.Windows.Forms.TextBox();
-            this.xia = new System.Windows.Forms.TextBox();
+            this.v = new System.Windows.Forms.TextBox();
+            this.yf = new System.Windows.Forms.TextBox();
+            this.xf = new System.Windows.Forms.TextBox();
+            this.yi = new System.Windows.Forms.TextBox();
+            this.xi = new System.Windows.Forms.TextBox();
             this.ida = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flightPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.introducirDatosDeVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,46 +63,47 @@
             this.button1.TabIndex = 36;
             this.button1.Text = "Introducir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // va
+            // v
             // 
-            this.va.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.va.Location = new System.Drawing.Point(186, 179);
-            this.va.Name = "va";
-            this.va.Size = new System.Drawing.Size(100, 22);
-            this.va.TabIndex = 35;
+            this.v.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.v.Location = new System.Drawing.Point(186, 179);
+            this.v.Name = "v";
+            this.v.Size = new System.Drawing.Size(100, 22);
+            this.v.TabIndex = 35;
             // 
-            // yfa
+            // yf
             // 
-            this.yfa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.yfa.Location = new System.Drawing.Point(357, 145);
-            this.yfa.Name = "yfa";
-            this.yfa.Size = new System.Drawing.Size(100, 22);
-            this.yfa.TabIndex = 34;
+            this.yf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yf.Location = new System.Drawing.Point(357, 145);
+            this.yf.Name = "yf";
+            this.yf.Size = new System.Drawing.Size(100, 22);
+            this.yf.TabIndex = 34;
             // 
-            // xfa
+            // xf
             // 
-            this.xfa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.xfa.Location = new System.Drawing.Point(186, 145);
-            this.xfa.Name = "xfa";
-            this.xfa.Size = new System.Drawing.Size(100, 22);
-            this.xfa.TabIndex = 33;
+            this.xf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xf.Location = new System.Drawing.Point(186, 145);
+            this.xf.Name = "xf";
+            this.xf.Size = new System.Drawing.Size(100, 22);
+            this.xf.TabIndex = 33;
             // 
-            // yia
+            // yi
             // 
-            this.yia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.yia.Location = new System.Drawing.Point(357, 111);
-            this.yia.Name = "yia";
-            this.yia.Size = new System.Drawing.Size(100, 22);
-            this.yia.TabIndex = 32;
+            this.yi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.yi.Location = new System.Drawing.Point(357, 111);
+            this.yi.Name = "yi";
+            this.yi.Size = new System.Drawing.Size(100, 22);
+            this.yi.TabIndex = 32;
             // 
-            // xia
+            // xi
             // 
-            this.xia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.xia.Location = new System.Drawing.Point(186, 111);
-            this.xia.Name = "xia";
-            this.xia.Size = new System.Drawing.Size(100, 22);
-            this.xia.TabIndex = 31;
+            this.xi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.xi.Location = new System.Drawing.Point(186, 111);
+            this.xi.Name = "xi";
+            this.xi.Size = new System.Drawing.Size(100, 22);
+            this.xi.TabIndex = 31;
             // 
             // ida
             // 
@@ -152,8 +153,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.flightPlanToolStripMenuItem,
-            this.seguridadToolStripMenuItem});
+            this.flightPlanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -162,37 +162,41 @@
             // 
             // flightPlanToolStripMenuItem
             // 
+            this.flightPlanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.introducirDatosDeVueloToolStripMenuItem});
             this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
-            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
-            this.flightPlanToolStripMenuItem.Text = "FlightPlan";
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.flightPlanToolStripMenuItem.Text = "Opciones";
             this.flightPlanToolStripMenuItem.Click += new System.EventHandler(this.flightPlanToolStripMenuItem_Click);
             // 
-            // seguridadToolStripMenuItem
+            // introducirDatosDeVueloToolStripMenuItem
             // 
-            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
-            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            this.introducirDatosDeVueloToolStripMenuItem.Name = "introducirDatosDeVueloToolStripMenuItem";
+            this.introducirDatosDeVueloToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.introducirDatosDeVueloToolStripMenuItem.Text = "Introducir datos de vuelo";
+            this.introducirDatosDeVueloToolStripMenuItem.Click += new System.EventHandler(this.introducirDatosDeVueloToolStripMenuItem_Click);
             // 
-            // Form1
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.va);
-            this.Controls.Add(this.yfa);
-            this.Controls.Add(this.xfa);
-            this.Controls.Add(this.yia);
-            this.Controls.Add(this.xia);
+            this.Controls.Add(this.v);
+            this.Controls.Add(this.yf);
+            this.Controls.Add(this.xf);
+            this.Controls.Add(this.yi);
+            this.Controls.Add(this.xi);
             this.Controls.Add(this.ida);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Menu";
+            this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -204,11 +208,11 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox va;
-        private System.Windows.Forms.TextBox yfa;
-        private System.Windows.Forms.TextBox xfa;
-        private System.Windows.Forms.TextBox yia;
-        private System.Windows.Forms.TextBox xia;
+        private System.Windows.Forms.TextBox v;
+        private System.Windows.Forms.TextBox yf;
+        private System.Windows.Forms.TextBox xf;
+        private System.Windows.Forms.TextBox yi;
+        private System.Windows.Forms.TextBox xi;
         private System.Windows.Forms.TextBox ida;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -216,7 +220,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem flightPlanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem introducirDatosDeVueloToolStripMenuItem;
     }
 }
 
