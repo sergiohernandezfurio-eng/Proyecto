@@ -35,7 +35,7 @@
             this.xf = new System.Windows.Forms.TextBox();
             this.yi = new System.Windows.Forms.TextBox();
             this.xi = new System.Windows.Forms.TextBox();
-            this.ida = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -107,13 +107,13 @@
             this.xi.Size = new System.Drawing.Size(100, 22);
             this.xi.TabIndex = 31;
             // 
-            // ida
+            // id
             // 
-            this.ida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ida.Location = new System.Drawing.Point(186, 70);
-            this.ida.Name = "ida";
-            this.ida.Size = new System.Drawing.Size(100, 22);
-            this.ida.TabIndex = 30;
+            this.id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id.Location = new System.Drawing.Point(186, 70);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(100, 22);
+            this.id.TabIndex = 30;
             // 
             // label4
             // 
@@ -209,7 +209,7 @@
             this.Controls.Add(this.xf);
             this.Controls.Add(this.yi);
             this.Controls.Add(this.xi);
-            this.Controls.Add(this.ida);
+            this.Controls.Add(this.id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -234,7 +234,7 @@
         private System.Windows.Forms.TextBox xf;
         private System.Windows.Forms.TextBox yi;
         private System.Windows.Forms.TextBox xi;
-        private System.Windows.Forms.TextBox ida;
+        private System.Windows.Forms.TextBox id;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

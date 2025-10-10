@@ -26,6 +26,8 @@ namespace Menú_de_Opciones
             label3.Text = "";
             label4.Text = "";
             label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
         }
 
         private void flightPlanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace Menú_de_Opciones
             label3.Text = "Posición final";
             label4.Text = "Velocidad";
             label5.Text = "";
+            label6.Text = "X";
+            label7.Text = "Y";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,7 +55,7 @@ namespace Menú_de_Opciones
             double V;
             try
             {
-                string identificador = Console.ReadLine();
+                string identificador = id.Text;
 
                 Xi = Convert.ToDouble(xi.Text);
                 Yi = Convert.ToDouble(yi.Text);
@@ -85,7 +89,7 @@ namespace Menú_de_Opciones
 
             try
             {
-                string identificador = Console.ReadLine();
+                string identificador = id.Text;
 
                 Xi = Convert.ToDouble(xi.Text);
                 Yi = Convert.ToDouble(yi.Text);
