@@ -11,6 +11,7 @@ namespace FlightLib
         // Atributos
 
         string id; // identificador
+        Position initialPosition; // posicion inicial
         Position currentPosition; // posicion actual
         Position finalPosition; // posicion final
         double velocidad; //Velocidad
@@ -19,6 +20,7 @@ namespace FlightLib
         public FlightPlan(string id, double cpx, double cpy, double fpx, double fpy, double velocidad)
         {
             this.id = id;
+            this.initialPosition = new Position(cpx, cpy);
             this.currentPosition = new Position(cpx, cpy);
             this.finalPosition = new Position(fpx, fpy);
             this.velocidad = velocidad;
@@ -44,7 +46,28 @@ namespace FlightLib
         // setter del atributo velocidad
         { this.velocidad = velocidad; }
 
-
+        //Gets
+        public string GetId()
+        {
+            return id;
+        }
+        public Position GetInitialPosition()
+        {
+            return this.initialPosition;
+        }
+        public Position GetCurrentPosition()
+        {
+            return this.currentPosition;
+        }
+        public Position GetFinalPosition()
+        {
+            return this.finalPosition;
+        }
+        public double GetVelocidad()
+        {
+            return this.velocidad;
+        }
+        //Métodos
         public bool HaLlegado()
         {
             bool esta_en_destino = false;
@@ -84,7 +107,16 @@ namespace FlightLib
             }
 
         }
+        public void Restart()
+        {
+            this.currentPosition = this.initialPosition;
+        }
 
+        public double Distance(FlightPlan b)
+        {
+            double distancia = b.currentPosition.Distancia(this.currentPosition);
+            return distancia;
+        }
         public bool conflictoProximidad(FlightPlan b, double minimaDistancia)
         {
             bool conflicto = false;
