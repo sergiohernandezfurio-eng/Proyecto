@@ -249,6 +249,7 @@
             this.simulaciónToolStripMenuItem.Name = "simulaciónToolStripMenuItem";
             this.simulaciónToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.simulaciónToolStripMenuItem.Text = "Simulación";
+            this.simulaciónToolStripMenuItem.Click += new System.EventHandler(this.simulaciónToolStripMenuItem_Click);
             // 
             // Menu
             // 

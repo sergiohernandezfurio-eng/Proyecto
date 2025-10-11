@@ -16,6 +16,9 @@ namespace Menú_de_Opciones
         FlightPlanList miLista = new FlightPlanList();
         FlightPlan plan_a;
         FlightPlan plan_b;
+        double distancia;
+        int tiempo;
+
         int contadorPlanes = 0; //Contador para los dos planes de vuelo
         public Menu()
         {
@@ -71,13 +74,16 @@ namespace Menú_de_Opciones
             textTiempo.Visible = false;
             btnIntroducir.Visible = true;
             btnGuardar.Visible = false;
+
+            MessageBox.Show("Introduzca el plan de vuelo A.");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             try
             {
+                
                 double Xi;
                 double Yi;
                 double Xf;
@@ -108,6 +114,7 @@ namespace Menú_de_Opciones
                     yf.Text = "";
                     vtext.Text = "";
                     id.Text = "";
+                    MessageBox.Show("Introduzca el plan de vuelo B.");
 
                 }
 
@@ -122,7 +129,6 @@ namespace Menú_de_Opciones
                     vtext.Text = "";
                     id.Text = "";
                     miLista.AddFlightPlan(plan_b);
-                    contadorPlanes = 0;
                 }
 
             }
@@ -169,9 +175,6 @@ namespace Menú_de_Opciones
             {
                 int i = 0;
                 int ciclos = 2;
-                double distancia;
-                int tiempo;
-
 
                 distancia = Convert.ToDouble(textDistancia.Text);
                 tiempo = Convert.ToInt32(textTiempo.Text);
@@ -200,6 +203,13 @@ namespace Menú_de_Opciones
                 return;
             }
             ;
+        }
+
+        private void simulaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSimulacion formSim = new FormSimulacion();
+            formSim.SetData(miLista, tiempo);
+            formSim.ShowDialog();
         }
     }
 }

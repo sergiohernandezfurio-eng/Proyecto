@@ -35,6 +35,12 @@ namespace FlightLib
                 return null;
             }
         }
+
+        public int GetNumero()
+        {
+            return numero;
+        }
+
         public void Mover(int tiempo)
         {
             foreach (FlightPlan flight in vector)
