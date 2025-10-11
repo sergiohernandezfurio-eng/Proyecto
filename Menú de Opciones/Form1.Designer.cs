@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIntroducir = new System.Windows.Forms.Button();
             this.vtext = new System.Windows.Forms.TextBox();
             this.yf = new System.Windows.Forms.TextBox();
             this.xf = new System.Windows.Forms.TextBox();
@@ -43,29 +42,26 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flightPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.introducirDatosDeVueloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.distanciaDeSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textDistancia = new System.Windows.Forms.TextBox();
+            this.textTiempo = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label5
+            // btnIntroducir
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "label5";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(693, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 28);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Introducir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIntroducir.Location = new System.Drawing.Point(693, 410);
+            this.btnIntroducir.Name = "btnIntroducir";
+            this.btnIntroducir.Size = new System.Drawing.Size(95, 28);
+            this.btnIntroducir.TabIndex = 36;
+            this.btnIntroducir.Text = "Introducir";
+            this.btnIntroducir.UseVisualStyleBackColor = true;
+            this.btnIntroducir.Click += new System.EventHandler(this.button1_Click);
             // 
             // vtext
             // 
@@ -158,26 +154,33 @@
             this.flightPlanToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // flightPlanToolStripMenuItem
             // 
             this.flightPlanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.introducirDatosDeVueloToolStripMenuItem});
+            this.introducirDatosDeVueloToolStripMenuItem,
+            this.distanciaDeSeguridadToolStripMenuItem});
             this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
-            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.flightPlanToolStripMenuItem.Text = "Opciones";
             this.flightPlanToolStripMenuItem.Click += new System.EventHandler(this.flightPlanToolStripMenuItem_Click);
             // 
             // introducirDatosDeVueloToolStripMenuItem
             // 
             this.introducirDatosDeVueloToolStripMenuItem.Name = "introducirDatosDeVueloToolStripMenuItem";
-            this.introducirDatosDeVueloToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.introducirDatosDeVueloToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
             this.introducirDatosDeVueloToolStripMenuItem.Text = "Introducir datos de vuelo";
             this.introducirDatosDeVueloToolStripMenuItem.Click += new System.EventHandler(this.introducirDatosDeVueloToolStripMenuItem_Click);
+            // 
+            // distanciaDeSeguridadToolStripMenuItem
+            // 
+            this.distanciaDeSeguridadToolStripMenuItem.Name = "distanciaDeSeguridadToolStripMenuItem";
+            this.distanciaDeSeguridadToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
+            this.distanciaDeSeguridadToolStripMenuItem.Text = "Distancia de seguridad y tiempo de ciclo";
+            this.distanciaDeSeguridadToolStripMenuItem.Click += new System.EventHandler(this.distanciaDeSeguridadToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -195,15 +198,63 @@
             this.label7.TabIndex = 40;
             this.label7.Text = "Y:";
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(592, 410);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(95, 28);
+            this.btnGuardar.TabIndex = 41;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 295);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 16);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Distancia";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(36, 332);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 16);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Tiempo de ciclo";
+            // 
+            // textDistancia
+            // 
+            this.textDistancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textDistancia.Location = new System.Drawing.Point(186, 289);
+            this.textDistancia.Name = "textDistancia";
+            this.textDistancia.Size = new System.Drawing.Size(100, 22);
+            this.textDistancia.TabIndex = 44;
+            // 
+            // textTiempo
+            // 
+            this.textTiempo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTiempo.Location = new System.Drawing.Point(186, 326);
+            this.textTiempo.Name = "textTiempo";
+            this.textTiempo.Size = new System.Drawing.Size(100, 22);
+            this.textTiempo.TabIndex = 45;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textTiempo);
+            this.Controls.Add(this.textDistancia);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnIntroducir);
             this.Controls.Add(this.vtext);
             this.Controls.Add(this.yf);
             this.Controls.Add(this.xf);
@@ -226,9 +277,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIntroducir;
         private System.Windows.Forms.TextBox vtext;
         private System.Windows.Forms.TextBox yf;
         private System.Windows.Forms.TextBox xf;
@@ -244,6 +293,12 @@
         private System.Windows.Forms.ToolStripMenuItem introducirDatosDeVueloToolStripMenuItem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolStripMenuItem distanciaDeSeguridadToolStripMenuItem;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textDistancia;
+        private System.Windows.Forms.TextBox textTiempo;
     }
 }
 
