@@ -209,7 +209,7 @@ namespace Menú_de_Opciones
         {
             FormSimulacion formSim = new FormSimulacion();
             formSim.SetData(miLista, tiempo);
-            formSim.ShowDialog();
+            formSim.Show();
         }
     }
 }

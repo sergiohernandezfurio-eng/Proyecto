@@ -33,9 +33,9 @@
             // 
             // miPanel
             // 
-            this.miPanel.Location = new System.Drawing.Point(356, 190);
+            this.miPanel.Location = new System.Drawing.Point(12, 12);
             this.miPanel.Name = "miPanel";
-            this.miPanel.Size = new System.Drawing.Size(200, 100);
+            this.miPanel.Size = new System.Drawing.Size(763, 416);
             this.miPanel.TabIndex = 0;
             // 
             // FormSimulacion
@@ -46,6 +46,7 @@
             this.Controls.Add(this.miPanel);
             this.Name = "FormSimulacion";
             this.Text = "Simulacion";
+            this.Load += new System.EventHandler(this.FormSimulacion_Load_1);
             this.ResumeLayout(false);
 
         }

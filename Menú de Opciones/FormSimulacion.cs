@@ -31,16 +31,16 @@ namespace Menú_de_Opciones
             tiempo = c;
         }
 
-        public void Simular_Load (object sender, EventArgs e)
+        private void FormSimulacion_Load_1(object sender, EventArgs e)
         {
             //MessageBox.Show("");
             vuelos = new PictureBox[miLista.GetNumero()];
             int i = 0;
-            while (i< miLista.GetNumero())
+            while (i < miLista.GetNumero())
             {
                 //representar vuelo en poscición i
-                PictureBox p= new PictureBox();
-                FlightPlan f= miLista.GetFlightPlan(i);
+                PictureBox p = new PictureBox();
+                FlightPlan f = miLista.GetFlightPlan(i);
 
                 //Configurar el picture box
 
@@ -60,10 +60,8 @@ namespace Menú_de_Opciones
                 miPanel.Controls.Add(p);
                 vuelos[i] = p;
 
-                i++;
+                i=i+1;
             }
-
         }
-
     }
 }
