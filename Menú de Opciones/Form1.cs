@@ -46,15 +46,18 @@ namespace Menú_de_Opciones
             label7.Text = "Y";
         }
 
+        int contadorPlanes = 0; //Contador para los dos planes de vuelo
         private void button1_Click(object sender, EventArgs e)
         {
-            double Xi;
-            double Yi;
-            double Xf;
-            double Yf;
-            double V;
+           
             try
             {
+                double Xi;
+                double Yi;
+                double Xf;
+                double Yf;
+                double V;
+
                 string identificador = id.Text;
 
                 Xi = Convert.ToDouble(xi.Text);
@@ -64,7 +67,33 @@ namespace Menú_de_Opciones
 
                 V = Convert.ToDouble(vtext.Text);
 
-                FlightPlan plan_a = new FlightPlan(identificador, Xi, Yi, Xf, Yf, V);
+                FlightPlan plan = new FlightPlan(identificador, Xi, Yi, Xf, Yf, V);
+
+                contadorPlanes++;
+
+                if (contadorPlanes==1)
+                {
+                    MessageBox.Show("Plan de vuelo A introducido correctamente.");
+                    xi.Text = "";
+                    yi.Text = "";
+                    xf.Text = "";
+                    yf.Text = "";
+                    vtext.Text = "";
+                    id.Text = "";
+                }
+
+                else if (contadorPlanes==2)
+                {
+                    MessageBox.Show("Plan de vuelo B introducido correctamente.");
+                    xi.Text = "";
+                    yi.Text = "";
+                    xf.Text = "";
+                    yf.Text = "";
+                    vtext.Text = "";
+                    id.Text = "";
+
+                    contadorPlanes = 0;
+                }
 
             }
             catch (FormatException)
@@ -79,41 +108,6 @@ namespace Menú_de_Opciones
             }
             ;
 
-            MessageBox.Show("Plan de vuelo A introducido");
-
-            xi.Text = "";
-            yi.Text = "";
-            xf.Text = "";
-            yf.Text = "";
-            vtext.Text = "";
-
-            try
-            {
-                string identificador = id.Text;
-
-                Xi = Convert.ToDouble(xi.Text);
-                Yi = Convert.ToDouble(yi.Text);
-                Xf = Convert.ToDouble(xf.Text);
-                Yf = Convert.ToDouble(yf.Text);
-
-                V = Convert.ToDouble(vtext.Text);
-
-                FlightPlan plan_b = new FlightPlan(identificador, Xi, Yi, Xf, Yf, V);
-
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Format error");
-                xi.Text = "Error";
-                yi.Text = "Error";
-                xf.Text = "Error";
-                yf.Text = "Error";
-                vtext.Text = "Error";
-                return;
-            }
-            ;
-
-            MessageBox.Show("Plan de vuelo B introducido");
         }
     }
 }
