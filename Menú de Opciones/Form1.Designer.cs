@@ -50,6 +50,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textDistancia = new System.Windows.Forms.TextBox();
             this.textTiempo = new System.Windows.Forms.TextBox();
+            this.simulaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,10 +152,11 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.flightPlanToolStripMenuItem});
+            this.flightPlanToolStripMenuItem,
+            this.simulaciónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -242,6 +244,12 @@
             this.textTiempo.Size = new System.Drawing.Size(100, 22);
             this.textTiempo.TabIndex = 45;
             // 
+            // simulaciónToolStripMenuItem
+            // 
+            this.simulaciónToolStripMenuItem.Name = "simulaciónToolStripMenuItem";
+            this.simulaciónToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
+            this.simulaciónToolStripMenuItem.Text = "Simulación";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,6 +307,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textDistancia;
         private System.Windows.Forms.TextBox textTiempo;
+        private System.Windows.Forms.ToolStripMenuItem simulaciónToolStripMenuItem;
     }
 }
 
