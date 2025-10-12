@@ -58,11 +58,25 @@ namespace Menú_de_Opciones
                 Bitmap image = new Bitmap("avion2.png");
                 p.Image = (Image)image;
                 miPanel.Controls.Add(p);
+
+                p.Tag = i;
+                p.Click += new System.EventHandler(this.ShowFlightInfo);
+
                 vuelos[i] = p;
+
 
                 i=i+1;
             }
         }
+        private void ShowFlightInfo(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+            int i = (int)p.Tag;
+            FlightPlan_Information f = new FlightPlan_Information();
+            f.setFlightPlan(miLista.GetFlightPlan(i));
+            f.ShowDialog();
+        }
+
 
         private void btnCiclo_Click(object sender, EventArgs e)
         {

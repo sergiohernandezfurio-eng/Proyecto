@@ -29,5 +29,9 @@ namespace Menú_de_Opciones
             Vbox.Text = Convert.ToString(vuelo.GetVelocidad());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

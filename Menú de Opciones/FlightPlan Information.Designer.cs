@@ -42,9 +42,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(290, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.Size = new System.Drawing.Size(163, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Flight Plan Information:";
+            this.label1.Text = "Informacion De Vuelo";
             // 
             // label2
             // 
@@ -87,12 +87,14 @@
             // 
             // button1
             // 
+            this.button1.AutoSize = true;
             this.button1.Location = new System.Drawing.Point(342, 310);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 6;
             this.button1.Text = "Cerrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FlightPlan_Information
             // 
