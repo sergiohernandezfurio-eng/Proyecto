@@ -83,5 +83,10 @@ namespace Menú_de_Opciones
             }
 
         }
+
+        private void miPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
