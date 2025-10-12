@@ -44,14 +44,14 @@ namespace Menú_de_Opciones
 
                 //Configurar el picture box
 
-                p.Width = 20;
-                p.Height = 20;
-                p.ClientSize = new Size(20, 20);
+                p.Width = 40;
+                p.Height = 40;
+                p.ClientSize = new Size(40, 40);
 
                 //ubicación
                 p.Location = new Point(Convert.ToInt32(f.GetInitialPosition().GetX()), Convert.ToInt32(f.GetInitialPosition().GetY()));
 
-                // Adjust the image size to 20x20
+                // Adjust the image size to 40x40
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
 
                 //the file should be in the debug folder
@@ -62,6 +62,26 @@ namespace Menú_de_Opciones
 
                 i=i+1;
             }
+        }
+
+        private void btnCiclo_Click(object sender, EventArgs e)
+        {
+            miLista.Mover(tiempo);
+
+            int i = 0;
+            while (i < miLista.GetNumero())
+            {
+                //representar vuelo en poscición i
+                PictureBox p = new PictureBox();
+                FlightPlan f = miLista.GetFlightPlan(i);
+
+                //ubicación
+                vuelos[i].Location = new Point(Convert.ToInt32(f.GetCurrentPosition().GetX()), Convert.ToInt32(f.GetCurrentPosition().GetY()));
+
+                i = i + 1;
+
+            }
+
         }
     }
 }
