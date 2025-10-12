@@ -211,5 +211,10 @@ namespace Menú_de_Opciones
             formSim.SetData(miLista, tiempo);
             formSim.Show();
         }
+
+        private void cargarVuelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
