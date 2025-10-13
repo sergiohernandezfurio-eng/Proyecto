@@ -51,7 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textDistancia = new System.Windows.Forms.TextBox();
             this.textTiempo = new System.Windows.Forms.TextBox();
-            this.cargarVuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,7 +165,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(900, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(900, 33);
             this.menuStrip1.TabIndex = 37;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -174,10 +173,9 @@
             // 
             this.flightPlanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.introducirDatosDeVueloToolStripMenuItem,
-            this.distanciaDeSeguridadToolStripMenuItem,
-            this.cargarVuelosToolStripMenuItem});
+            this.distanciaDeSeguridadToolStripMenuItem});
             this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
-            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
             this.flightPlanToolStripMenuItem.Text = "Opciones";
             this.flightPlanToolStripMenuItem.Click += new System.EventHandler(this.flightPlanToolStripMenuItem_Click);
             // 
@@ -198,7 +196,7 @@
             // simulaciónToolStripMenuItem
             // 
             this.simulaciónToolStripMenuItem.Name = "simulaciónToolStripMenuItem";
-            this.simulaciónToolStripMenuItem.Size = new System.Drawing.Size(114, 32);
+            this.simulaciónToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
             this.simulaciónToolStripMenuItem.Text = "Simulación";
             this.simulaciónToolStripMenuItem.Click += new System.EventHandler(this.simulaciónToolStripMenuItem_Click);
             // 
@@ -265,13 +263,6 @@
             this.textTiempo.Size = new System.Drawing.Size(112, 26);
             this.textTiempo.TabIndex = 45;
             // 
-            // cargarVuelosToolStripMenuItem
-            // 
-            this.cargarVuelosToolStripMenuItem.Name = "cargarVuelosToolStripMenuItem";
-            this.cargarVuelosToolStripMenuItem.Size = new System.Drawing.Size(435, 34);
-            this.cargarVuelosToolStripMenuItem.Text = "Cargar Vuelos";
-            this.cargarVuelosToolStripMenuItem.Click += new System.EventHandler(this.cargarVuelosToolStripMenuItem_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -331,7 +322,6 @@
         private System.Windows.Forms.TextBox textDistancia;
         private System.Windows.Forms.TextBox textTiempo;
         private System.Windows.Forms.ToolStripMenuItem simulaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarVuelosToolStripMenuItem;
     }
 }
 

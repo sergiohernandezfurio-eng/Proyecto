@@ -35,6 +35,8 @@
             this.Ybox = new System.Windows.Forms.TextBox();
             this.Vbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.flightNumberBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(101, 134);
+            this.label2.Location = new System.Drawing.Point(105, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 20);
             this.label2.TabIndex = 1;
@@ -58,7 +60,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(105, 210);
+            this.label3.Location = new System.Drawing.Point(105, 255);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 2;
@@ -66,21 +68,21 @@
             // 
             // Xbox
             // 
-            this.Xbox.Location = new System.Drawing.Point(253, 128);
+            this.Xbox.Location = new System.Drawing.Point(253, 207);
             this.Xbox.Name = "Xbox";
             this.Xbox.Size = new System.Drawing.Size(100, 26);
             this.Xbox.TabIndex = 3;
             // 
             // Ybox
             // 
-            this.Ybox.Location = new System.Drawing.Point(420, 128);
+            this.Ybox.Location = new System.Drawing.Point(423, 207);
             this.Ybox.Name = "Ybox";
             this.Ybox.Size = new System.Drawing.Size(100, 26);
             this.Ybox.TabIndex = 4;
             // 
             // Vbox
             // 
-            this.Vbox.Location = new System.Drawing.Point(252, 210);
+            this.Vbox.Location = new System.Drawing.Point(253, 255);
             this.Vbox.Name = "Vbox";
             this.Vbox.Size = new System.Drawing.Size(100, 26);
             this.Vbox.TabIndex = 5;
@@ -88,7 +90,7 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(342, 310);
+            this.button1.Location = new System.Drawing.Point(340, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 30);
             this.button1.TabIndex = 6;
@@ -96,11 +98,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(105, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Número de Vuelo";
+            // 
+            // flightNumberBox
+            // 
+            this.flightNumberBox.Location = new System.Drawing.Point(253, 153);
+            this.flightNumberBox.Name = "flightNumberBox";
+            this.flightNumberBox.Size = new System.Drawing.Size(100, 26);
+            this.flightNumberBox.TabIndex = 8;
+            // 
             // FlightPlan_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.flightNumberBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Vbox);
             this.Controls.Add(this.Ybox);
@@ -125,5 +145,7 @@
         private System.Windows.Forms.TextBox Ybox;
         private System.Windows.Forms.TextBox Vbox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox flightNumberBox;
     }
 }

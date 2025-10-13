@@ -16,6 +16,14 @@ namespace Menú_de_Opciones
 
         FlightPlanList miLista;
         int tiempo;
+        Point lastPoint;
+        public double distanciaSeguridad; // radio del círculo de seguridad
+
+        public void SetDistancia(double d)
+        {
+            distanciaSeguridad = d;
+        }
+
 
         //Picture boxes para representar los vuelos
         PictureBox[] vuelos;
@@ -67,6 +75,8 @@ namespace Menú_de_Opciones
 
                 i=i+1;
             }
+            miPanel.Invalidate();
+
         }
         private void ShowFlightInfo(object sender, EventArgs e)
         {
@@ -80,16 +90,16 @@ namespace Menú_de_Opciones
 
         private void btnCiclo_Click(object sender, EventArgs e)
         {
-            miLista.Mover(tiempo);
-
+            
             int i = 0;
             while (i < miLista.GetNumero())
             {
                 //representar vuelo en poscición i
                 PictureBox p = new PictureBox();
                 FlightPlan f = miLista.GetFlightPlan(i);
-
+                
                 //ubicación
+                
                 vuelos[i].Location = new Point(Convert.ToInt32(f.GetCurrentPosition().GetX()), Convert.ToInt32(f.GetCurrentPosition().GetY()));
 
                 i = i + 1;
@@ -100,7 +110,35 @@ namespace Menú_de_Opciones
 
         private void miPanel_Paint(object sender, PaintEventArgs e)
         {
+            if (miLista == null || vuelos == null) return;
 
+            Graphics g = e.Graphics;
+            Pen penLinea = new Pen(Color.Red, 2); // líneas de trayectoria
+            Pen penElipse = new Pen(Color.Blue, 2); // círculo de seguridad
+
+            int i = 0;
+            while (i < miLista.GetNumero())
+            {
+                FlightPlan f = miLista.GetFlightPlan(i);
+
+                // 1️⃣ Línea de trayectoria
+                Point origen = new Point((int)f.GetInitialPosition().GetX(), (int)f.GetInitialPosition().GetY());
+                Point destino = new Point((int)f.GetFinalPosition().GetX(), (int)f.GetFinalPosition().GetY());
+                g.DrawLine(penLinea, origen, destino);
+
+                // 2️⃣ Círculo de seguridad
+                PictureBox avión = vuelos[i];
+                int centroX = avión.Location.X + avión.Width / 2;
+                int centroY = avión.Location.Y + avión.Height / 2;
+                int radio = (int)distanciaSeguridad;
+
+                g.DrawEllipse(penElipse, centroX - radio, centroY - radio, radio * 2, radio * 2);
+
+                i++;
+            }
+
+            penLinea.Dispose();
+            penElipse.Dispose();
         }
     }
 }

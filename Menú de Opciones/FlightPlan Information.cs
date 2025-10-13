@@ -27,6 +27,7 @@ namespace Menú_de_Opciones
             Xbox.Text = Convert.ToString(vuelo.GetCurrentPosition().GetX());
             Ybox.Text = Convert.ToString(vuelo.GetCurrentPosition().GetY());
             Vbox.Text = Convert.ToString(vuelo.GetVelocidad());
+            flightNumberBox.Text = vuelo.GetId();
         }
 
         private void button1_Click(object sender, EventArgs e)

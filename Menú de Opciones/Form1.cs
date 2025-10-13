@@ -192,7 +192,12 @@ namespace Menú_de_Opciones
 
                     i = i + 1;
                 }
-
+                //Esto es para pasar la informacion de la distancia al form de simulacion
+                //y que se pueda usar para el radio de circumferencia.
+                FormSimulacion simulacion = new FormSimulacion();
+                simulacion.SetDistancia(distancia); // pasa el valor guardado
+                simulacion.SetData(miLista, tiempo);
+                simulacion.Show();
 
             }
             catch (FormatException)
